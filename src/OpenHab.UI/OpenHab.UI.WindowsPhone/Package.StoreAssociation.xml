@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
-  <Publisher>CN=60546FE3-195C-47C0-868E-9EB9888B3EBE</Publisher>
-  <PublisherDisplayName>Szymon Kobalczyk KOBUKOM</PublisherDisplayName>
+  <Publisher>CN=F6E456B0-3E75-4506-AC32-E1AB480D1890</Publisher>
+  <PublisherDisplayName>Sytone</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
     <Language Code="af" InMinimumRequirementSet="true" />
@@ -184,15 +184,11 @@
     <Language Code="vi-vn" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>KOBUKOM.openHAB</MainPackageIdentityName>
+    <MainPackageIdentityName>42660Sytone.openHABonWindows</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>openHAB</ReservedName>
+      <ReservedName>openHAB on Windows</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames>
-    <MainPackageIdentityName>KOBUKOM.MOHGPointsOfInterestTest</MainPackageIdentityName>
-    <MainPackageIdentityName>KOBUKOM.MOHGRequestServicesTest</MainPackageIdentityName>
-    <MainPackageIdentityName>KOBUKOM.MOHGSurveyTest</MainPackageIdentityName>
-  </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=a3f975f6-ae9b-4f21-8cdb-1fcc200be0ee" />
+  <AccountPackageIdentityNames />
+  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=91dc0e59-8a8f-42ee-b09d-15ae5a6402c5" />
 </StoreAssociation>

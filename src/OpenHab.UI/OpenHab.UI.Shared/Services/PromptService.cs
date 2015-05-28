@@ -20,15 +20,15 @@ namespace OpenHab.UI.Services
     {
         public void ShowNotification(string title, string message)
         {
-            ToastPrompt toast = new ToastPrompt();
-            toast.TextOrientation = Orientation.Vertical;
-            toast.TextWrapping = TextWrapping.WrapWholeWords;
-            toast.Title = title;
-            toast.Message = message;
-            toast.MillisecondsUntilHidden = 2000; // show for 3 seconds.
+            ////ToastPrompt toast = new ToastPrompt();
+            ////toast.TextOrientation = Orientation.Vertical;
+            ////toast.TextWrapping = TextWrapping.WrapWholeWords;
+            ////toast.Title = title;
+            ////toast.Message = message;
+            ////toast.MillisecondsUntilHidden = 2000; // show for 3 seconds.
 
-            //toast.ImageSource = new BitmapImage(new Uri("ApplicationIcon.png", UriKind.RelativeOrAbsolute));
-            toast.Show();
+            //////toast.ImageSource = new BitmapImage(new Uri("ApplicationIcon.png", UriKind.RelativeOrAbsolute));
+            ////toast.Show();
         }
 
         public void ShowError(string title, string message, IList<UICommand> commands)

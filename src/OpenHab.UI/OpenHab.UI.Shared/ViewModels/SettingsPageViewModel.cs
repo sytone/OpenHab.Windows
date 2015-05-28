@@ -268,7 +268,7 @@ namespace OpenHab.UI.ViewModels
 
             var client = new OpenHabRestClient(baseUri);
 
-            _testConnectionCancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(15));
+            _testConnectionCancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(60));
 
             IsConnecting = true;
             ConnectionMessage = "Connecting...";

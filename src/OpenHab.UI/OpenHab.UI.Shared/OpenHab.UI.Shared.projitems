@@ -38,10 +38,21 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\IWidgetViewModelFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\RollerShutterWidgetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\SectionSwitchWidgetViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\SelectionWidgetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\SliderWidgetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\SwitchWidgetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\TextWidgetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\WidgetViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Widgets\WidgetViewModelFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Resources\FlatButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Resources\ToggleSwitchStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

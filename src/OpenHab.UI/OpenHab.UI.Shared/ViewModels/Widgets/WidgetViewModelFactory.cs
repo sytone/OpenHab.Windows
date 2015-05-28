@@ -84,10 +84,6 @@ namespace OpenHab.UI.ViewModels
     {
     }
 
-    public class SelectionWidgetViewModel : WidgetViewModelBase
-    {
-    }
-
     public class ImageWidgetViewModel : WidgetViewModelBase
     {
     }

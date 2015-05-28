@@ -11,6 +11,7 @@
     xmlns:helpers="using:OpenHab.UI.Helpers"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:toolkit="using:WinRTXamlToolkit.Controls"
+    
     xmlns:client="using:OpenHab.Client"
     mc:Ignorable="d"
     RequestedTheme="Light"
@@ -269,6 +270,52 @@
                 </Grid>
             </Border>
         </DataTemplate>
+
+        <!-- Selection Template -->
+        <DataTemplate x:Key="SelectionWidgetTemplate">
+
+            <Border Style="{StaticResource WidgetBorderStyle}" d:DesignWidth="410.5"
+                    d:DataContext="{d:DesignInstance viewModels:SelectionWidgetViewModel}">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.RowSpan="2" VerticalAlignment="Top"
+                           Style="{StaticResource WidgetIconStyle}">
+                        <Image.Source>
+                            <BitmapImage UriSource="{Binding IconUrl}" />
+                        </Image.Source>
+                    </Image>
+
+                    <TextBlock Text="{Binding Label}" Style="{StaticResource WidgetLabelStyle}" 
+                               Margin="0,6,6,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" />
+
+                    <TextBlock Style="{StaticResource WidgetValueStyle}" Margin="0,6,6,0" Grid.Column="2" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                               Text="{Binding SelectedValue}" 
+                               Visibility="{Binding Value, Converter={StaticResource NotEmptyToVisibilityConverter}}"
+                               Foreground="{Binding ValueColor, Converter={StaticResource ColorToBrushConverter}, ConverterParameter={StaticResource WidgetLabelForeground}}"/>
+                    
+                    <Button Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="1" Margin="8,0,8,4" Height="44" 
+                            Content="{Binding SelectedValue.Label, Mode=TwoWay}"
+                            >
+                        <Button.Flyout>
+                            <ListPickerFlyout ItemsSource="{Binding Mappings}" 
+                                              Placement="Full" SelectedValue="{Binding SelectedValue, Mode=TwoWay}" 
+                                              DisplayMemberPath="Label" ItemsPicked="{Binding ToggleCommand}" />
+                        </Button.Flyout>
+                    </Button>
+                    
+                </Grid>
+            </Border>
+        </DataTemplate>
         
         <DataTemplate x:Key="RollerShutterWidgetTemplate">
 
@@ -325,7 +372,8 @@
                                    SwitchWidgetTemplate="{StaticResource SwitchWidgetTemplate}"
                                    SectionSwitchWidgetTemplate="{StaticResource SectionSwitchWidgetTemplate}"
                                    SliderWidgetTemplate="{StaticResource SliderWidgetTemplate}"
-                                   RollerShutterWidgetTemplate="{StaticResource RollerShutterWidgetTemplate}"/>
+                                   RollerShutterWidgetTemplate="{StaticResource RollerShutterWidgetTemplate}"
+                                   SelectionWidgetTemplate="{StaticResource SelectionWidgetTemplate}"/>
 
         <DataTemplate x:Key="HubHeaderTemplate" >
             <TextBlock Text="{Binding Converter={StaticResource UpperCaseConverter}}"/>
